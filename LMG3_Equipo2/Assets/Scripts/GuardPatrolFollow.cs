@@ -27,7 +27,7 @@ public class GuardPatrolFollow : MonoBehaviour
     {
         if (HasAgentArrivedToDestination())
         {
-            Debug.Log("arrived to destination");
+            //Debug.Log("arrived to destination");
             StartWalkingToNextPoint();
         }
     }
@@ -65,7 +65,7 @@ public class GuardPatrolFollow : MonoBehaviour
                 pointIndex = 0;
             }
         }
-        Debug.Log("Next Point Index: " + pointIndex);
+        //Debug.Log("Next Point Index: " + pointIndex);
         agent.SetDestination(patrolPoints.points[pointIndex].positionOnFloor);
     }
 
