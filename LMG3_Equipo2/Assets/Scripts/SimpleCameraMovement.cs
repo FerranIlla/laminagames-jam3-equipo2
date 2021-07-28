@@ -62,7 +62,6 @@ public class SimpleCameraMovement : MonoBehaviour
 
 
         //Keyboard commands
-        float f = 0.0f;
         Vector3 p = GetBaseInput(); //take WASD input from user
 
         if (Input.GetKey(KeyCode.LeftShift))
