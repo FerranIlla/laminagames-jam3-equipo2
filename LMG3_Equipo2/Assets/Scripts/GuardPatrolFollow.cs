@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class GuardPatrolFollow : MonoBehaviour
     int pointIndex = -1;
     bool reverse = false;
     [SerializeField] private bool pingPong;
+    public Animator animator;
+    public float cSpeedDebug;
 
     // Start is called before the first frame update
     void Awake()
@@ -30,6 +33,15 @@ public class GuardPatrolFollow : MonoBehaviour
             //Debug.Log("arrived to destination");
             StartWalkingToNextPoint();
         }
+
+        SetSpeedAnimationParameter();
+        cSpeedDebug = agent.velocity.magnitude;
+    }
+
+    private void SetSpeedAnimationParameter()
+    {
+        animator.SetFloat("currentSpeed", agent.velocity.magnitude);
+        
     }
 
     void StartWalkingToNextPoint()
