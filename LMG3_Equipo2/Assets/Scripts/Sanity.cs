@@ -16,11 +16,11 @@ public class Sanity : MonoBehaviour
 
     private void Update()
     {
-        //debug imact
-        if (Input.GetButtonDown("Jump"))
-        {
-            SanityImpact(0.1f);
-        }
+        ////debug imact
+        //if (Input.GetButtonDown("Jump"))
+        //{
+        //    SanityImpact(0.1f);
+        //}
 
         if(timerRecovery < 0)
         {
