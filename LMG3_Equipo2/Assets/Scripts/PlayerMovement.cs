@@ -23,4 +23,9 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(move * speed * Time.deltaTime);
     }
+
+    public bool IsMoving()
+    {
+        return controller.velocity != Vector3.zero;
+    }
 }
