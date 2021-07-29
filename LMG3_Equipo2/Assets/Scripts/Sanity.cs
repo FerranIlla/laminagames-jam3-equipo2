@@ -12,8 +12,9 @@ public class Sanity : MonoBehaviour
     float timerRecovery;
 
     public Image fadeBlackImage;
+    public Image fadeWhiteImage;
 
-    
+
 
     private void Awake()
     {
@@ -71,5 +72,22 @@ public class Sanity : MonoBehaviour
         }
 
         SceneManager.LoadScene("GameOver");
+    }
+
+    IEnumerator WinGame()
+    {
+        for (float f = 0f; f < 3f; f += Time.deltaTime)
+        {
+            float value = Utils.Map(f, 0f, 3f, 0f, 1f);
+            fadeWhiteImage.color = new Color(fadeWhiteImage.color.r, fadeWhiteImage.color.g, fadeWhiteImage.color.b, value);
+            yield return null;
+        }
+
+        SceneManager.LoadScene("WinGame");
+    }
+
+    public void TiggerWinGame()
+    {
+        StartCoroutine(WinGame());
     }
 }
