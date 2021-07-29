@@ -20,4 +20,6 @@ public class CameraAnimations : MonoBehaviour
         //idle-walk respiration shake
         walkShake.SetBool("isWalking", playerMovement.IsMoving());
     }
+
+    
 }
