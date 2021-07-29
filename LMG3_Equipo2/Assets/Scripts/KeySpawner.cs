@@ -45,6 +45,6 @@ public class KeySpawner : MonoBehaviour
 
     void PrintInfo()
     {
-        Debug.Log("Selected Key number " + randomIndex+1);
+        Debug.Log("Selected Key number " + (randomIndex+1));
     }
 }

@@ -9,6 +9,14 @@ public class Sanity : MonoBehaviour
     public float secondsToWaitUntilStartRecovery = 3.0f; //value to reset the timer to
     float timerRecovery;
 
+    float sanityLastFrame = 1;
+    [Range(0f,1f)]
+    public float lowThreshold;
+    [Range(0f, 1f)]
+    public float highThreshold;
+
+    
+
     private void Awake()
     {
         timerRecovery = secondsToWaitUntilStartRecovery;
@@ -28,10 +36,23 @@ public class Sanity : MonoBehaviour
         }
         timerRecovery -= Time.deltaTime;
 
-
-
         //clamp Sanity Value
         sanityAmount = Mathf.Clamp01(sanityAmount);
+
+        //check if surpassed thresholds
+        if(sanityAmount < lowThreshold && sanityLastFrame >= lowThreshold)
+        {
+            LowCrazyReached();
+        }
+
+        if(sanityAmount < highThreshold && sanityLastFrame >= highThreshold)
+        {
+            HighCrazyreached();
+        }
+
+
+
+        sanityLastFrame = sanityAmount;
     }
 
     public void SanityImpact(float amount)
@@ -47,5 +68,15 @@ public class Sanity : MonoBehaviour
     void DecreaseCrazynessOverTime()
     {
         sanityAmount += decreasingSpeed * Time.deltaTime;
+    }
+
+    void LowCrazyReached()
+    {
+
+    }
+
+    void HighCrazyreached()
+    {
+
     }
 }
