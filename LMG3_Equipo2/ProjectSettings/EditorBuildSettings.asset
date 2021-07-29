@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Blocking.unity
     guid: 356b5212be4783949aadd2af174c082b
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 794830fa10a92204295b1f8e75729012
+  - enabled: 1
+    path: Assets/Scenes/WinScene.unity
+    guid: bedc886c940c0a04882e4757a71a3680
   m_configObjects: {}

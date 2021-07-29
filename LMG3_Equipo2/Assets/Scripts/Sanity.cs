@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Sanity : MonoBehaviour
 {
@@ -9,17 +11,14 @@ public class Sanity : MonoBehaviour
     public float secondsToWaitUntilStartRecovery = 3.0f; //value to reset the timer to
     float timerRecovery;
 
-    float sanityLastFrame = 1;
-    [Range(0f,1f)]
-    public float lowThreshold;
-    [Range(0f, 1f)]
-    public float highThreshold;
+    public Image fadeBlackImage;
 
     
 
     private void Awake()
     {
         timerRecovery = secondsToWaitUntilStartRecovery;
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Update()
@@ -39,20 +38,12 @@ public class Sanity : MonoBehaviour
         //clamp Sanity Value
         sanityAmount = Mathf.Clamp01(sanityAmount);
 
-        //check if surpassed thresholds
-        if(sanityAmount < lowThreshold && sanityLastFrame >= lowThreshold)
+
+        if (sanityAmount <= 0f)
         {
-            LowCrazyReached();
+            StartCoroutine(LoseGame());
         }
 
-        if(sanityAmount < highThreshold && sanityLastFrame >= highThreshold)
-        {
-            HighCrazyreached();
-        }
-
-
-
-        sanityLastFrame = sanityAmount;
     }
 
     public void SanityImpact(float amount)
@@ -70,13 +61,15 @@ public class Sanity : MonoBehaviour
         sanityAmount += decreasingSpeed * Time.deltaTime;
     }
 
-    void LowCrazyReached()
+    IEnumerator LoseGame()
     {
+        for (float f = 0f; f < 3f; f += Time.deltaTime)
+        {
+            float value = Utils.Map(f, 0f, 3f, 0f, 1f);
+            fadeBlackImage.color = new Color(fadeBlackImage.color.r, fadeBlackImage.color.g, fadeBlackImage.color.b, value);
+            yield return null;
+        }
 
-    }
-
-    void HighCrazyreached()
-    {
-
+        SceneManager.LoadScene("GameOver");
     }
 }
