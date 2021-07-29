@@ -43,4 +43,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 304bf65d78d02af41b797af1c946616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: OpenDoorSound
+    clip: {fileID: 8300000, guid: 2e685983412d2d840bbdb8ac6a8be554, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: BlockedDoorSound
+    clip: {fileID: 8300000, guid: 0ce7135c6742c4f4bbc37ff52296e0d8, type: 3}
+    volume: 0.71
+    pitch: 1
+    source: {fileID: 0}

@@ -6,7 +6,8 @@ public class DoorKey : MonoBehaviour
 {
 
     Player player;
-    public float rangeDebug;
+    public GameObject doorBlockCollider;
+    public Animator animator;
 
     void Awake()
     {
@@ -16,28 +17,27 @@ public class DoorKey : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.hasKey)
-        {
-            if (PlayerInRange())
-            {
-                //openDoor - soun, animation
-
-                player.hasKey = false;
-            }
-        }
     }
 
-    bool PlayerInRange()
-    {
-        float range = 1.5f;
-        Vector2 playerHorizontalPos = new Vector2(player.transform.position.x, player.transform.position.z);
-        Vector2 keyHorizontalPos = new Vector2(transform.position.x, transform.position.z);
-        rangeDebug = Vector2.Distance(playerHorizontalPos, keyHorizontalPos);
-        if (Vector2.Distance(playerHorizontalPos, keyHorizontalPos) < range)
-        {
-            return true;
-        }
 
-        return false;
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            if (player.hasKey)
+            {
+                //open door
+                animator.SetTrigger("OpenDoor");
+                AudioManager.instance.PlaySound("OpenDoorSound");
+
+                player.hasKey = false;
+                GetComponent<BoxCollider>().enabled = false;
+                doorBlockCollider.SetActive(false);
+            }
+            else
+            {
+                AudioManager.instance.PlaySound("BlockedDoorSound");
+            }
+        }
     }
 }
