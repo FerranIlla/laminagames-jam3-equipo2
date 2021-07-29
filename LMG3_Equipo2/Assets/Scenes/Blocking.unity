@@ -3749,6 +3749,7 @@ GameObject:
   m_Component:
   - component: {fileID: 271783287}
   - component: {fileID: 271783288}
+  - component: {fileID: 271783289}
   m_Layer: 0
   m_Name: Texto3Collider1
   m_TagString: Untagged
@@ -3783,6 +3784,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.7871232, y: 2.9345512, z: 0.6087723}
   m_Center: {x: -0.5219829, y: -0.9672756, z: -0.19561386}
+--- !u!114 &271783289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271783286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c617f2285b56c48972fb3854b43a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentence: No puedo acercarme a ellos, me volveran loco.
+  textUI: {fileID: 400787703}
 --- !u!1 &272751169
 GameObject:
   m_ObjectHideFlags: 0
@@ -4866,6 +4881,7 @@ GameObject:
   m_Component:
   - component: {fileID: 371068335}
   - component: {fileID: 371068336}
+  - component: {fileID: 371068337}
   m_Layer: 0
   m_Name: Texto2Collider
   m_TagString: Untagged
@@ -4900,6 +4916,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.7871232, y: 2.9345512, z: 0.6087723}
   m_Center: {x: -0.5219829, y: -0.9672756, z: -0.19561386}
+--- !u!114 &371068337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371068334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c617f2285b56c48972fb3854b43a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentence: "Ahgg\u2026 Estos ruidos me van a volver loco\u2026 mejor evitarlos."
+  textUI: {fileID: 400787703}
 --- !u!1001 &372420740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5440,6 +5470,154 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &400787702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400787706}
+  - component: {fileID: 400787705}
+  - component: {fileID: 400787704}
+  - component: {fileID: 400787703}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &400787703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400787702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed515a235f8f2be489507806d4f4f799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 400787704}
+--- !u!114 &400787704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400787702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: todas las celdas estan abiertas, parece que ha sido un fallo electrico.
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 575fe77be5ab4e84fa07b888ac4af69b, type: 2}
+  m_sharedMaterial: {fileID: 3470762403930895224, guid: 575fe77be5ab4e84fa07b888ac4af69b, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36.32
+  m_fontSizeBase: 36.32
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &400787705
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400787702}
+  m_CullTransparentMesh: 1
+--- !u!224 &400787706
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400787702}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 879085156}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 67.4}
+  m_SizeDelta: {x: 789.4, y: 105.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!1001 &401195379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5750,6 +5928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 425217085}
   - component: {fileID: 425217086}
+  - component: {fileID: 425217087}
   m_Layer: 0
   m_Name: Texto7Collider
   m_TagString: Untagged
@@ -5784,6 +5963,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 13.525678, y: 4.8314323, z: 1.2165887}
   m_Center: {x: 1.666728, y: -0.018835068, z: 1.4283056}
+--- !u!114 &425217087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425217084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c617f2285b56c48972fb3854b43a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentence: Mierda, creo que he visto un guardia, mejor que no me vea...
+  textUI: {fileID: 400787703}
 --- !u!1 &428500327
 GameObject:
   m_ObjectHideFlags: 0
@@ -7410,6 +7603,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7467294228106794917, guid: b6cbcdae2e60f72458befbc9049382a5, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 7467294228106794918, guid: b6cbcdae2e60f72458befbc9049382a5, type: 3}
       propertyPath: m_Name
       value: CanvasGameplay
@@ -8809,6 +9006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 661657347}
   - component: {fileID: 661657348}
+  - component: {fileID: 661657349}
   m_Layer: 0
   m_Name: Texto10Collider
   m_TagString: Untagged
@@ -8843,6 +9041,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.902036, y: 4.8314323, z: 1.2165887}
   m_Center: {x: -0.18018258, y: -0.018835068, z: 1.4283056}
+--- !u!114 &661657349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661657346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c617f2285b56c48972fb3854b43a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentence: "Lo consegui!, Ni siquiera yo tenia fe en mi mismo\u2026"
+  textUI: {fileID: 400787703}
 --- !u!1001 &664363402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9560,6 +9772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 690483818}
   - component: {fileID: 690483819}
+  - component: {fileID: 690483820}
   m_Layer: 0
   m_Name: Texto5Collider
   m_TagString: Untagged
@@ -9594,6 +9807,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.783484, y: 4.8314323, z: 1.2165887}
   m_Center: {x: -2.7043698, y: -0.018835068, z: 1.4283056}
+--- !u!114 &690483820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690483817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c617f2285b56c48972fb3854b43a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentence: Deberia encontrar la sala de control para escapar de aqui.
+  textUI: {fileID: 400787703}
 --- !u!1 &691590903
 GameObject:
   m_ObjectHideFlags: 0
@@ -9763,6 +9990,7 @@ GameObject:
   m_Component:
   - component: {fileID: 698851448}
   - component: {fileID: 698851449}
+  - component: {fileID: 698851450}
   m_Layer: 0
   m_Name: Texto8Collider
   m_TagString: Untagged
@@ -9797,6 +10025,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.902036, y: 4.8314323, z: 1.2165887}
   m_Center: {x: -0.18018258, y: -0.018835068, z: 1.4283056}
+--- !u!114 &698851450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698851447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c617f2285b56c48972fb3854b43a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentence: Que suerte, la reja se quedo abierta.
+  textUI: {fileID: 400787703}
 --- !u!1001 &699991584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13006,6 +13248,11 @@ BoxCollider:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 66d18b4a2a6ca934c9f36c33e6562555, type: 3}
   m_PrefabInstance: {fileID: 866875732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &879085156 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7467294228106794914, guid: b6cbcdae2e60f72458befbc9049382a5, type: 3}
+  m_PrefabInstance: {fileID: 594155700}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &879990445
 PrefabInstance:
@@ -16724,6 +16971,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1075376865}
   - component: {fileID: 1075376866}
+  - component: {fileID: 1075376867}
   m_Layer: 0
   m_Name: Texto6Collider
   m_TagString: Untagged
@@ -16758,6 +17006,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.783484, y: 4.8314323, z: 1.2165887}
   m_Center: {x: -2.7043698, y: -0.018835068, z: 1.4283056}
+--- !u!114 &1075376867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075376864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c617f2285b56c48972fb3854b43a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentence: "\xBFNecesitare una llave?"
+  textUI: {fileID: 400787703}
 --- !u!1001 &1094137365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17347,6 +17609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1121284584}
   - component: {fileID: 1121284585}
+  - component: {fileID: 1121284586}
   m_Layer: 0
   m_Name: Texto4Collider
   m_TagString: Untagged
@@ -17381,6 +17644,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.39768, y: 4.8314323, z: 1.216589}
   m_Center: {x: -2.0439863, y: -0.018835068, z: 1.4283056}
+--- !u!114 &1121284586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121284583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c617f2285b56c48972fb3854b43a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentence: "\xBFPor que gritan tanto?"
+  textUI: {fileID: 400787703}
 --- !u!1001 &1121487167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25685,6 +25962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorBlockCollider: {fileID: 1111648228}
   animator: {fileID: 1420068331}
+  textNarrativeDisplay: {fileID: 400787703}
 --- !u!4 &1518065559
 Transform:
   m_ObjectHideFlags: 0
@@ -28296,6 +28574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1731033012}
   - component: {fileID: 1731033013}
+  - component: {fileID: 1731033014}
   m_Layer: 0
   m_Name: Texto9Collider
   m_TagString: Untagged
@@ -28330,6 +28609,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.902036, y: 4.8314323, z: 1.2165887}
   m_Center: {x: -0.18018258, y: -0.018835068, z: 1.4283056}
+--- !u!114 &1731033014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731033011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c617f2285b56c48972fb3854b43a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentence: "tendre que buscar otro camino\u2026"
+  textUI: {fileID: 400787703}
 --- !u!1 &1731770730
 GameObject:
   m_ObjectHideFlags: 0
@@ -28340,6 +28633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1731770731}
   - component: {fileID: 1731770732}
+  - component: {fileID: 1731770733}
   m_Layer: 0
   m_Name: Texto1Collider
   m_TagString: Untagged
@@ -28374,6 +28668,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.2695327, y: 2.9345512, z: 0.6087723}
   m_Center: {x: -0.06792728, y: -0.9672756, z: -0.19561388}
+--- !u!114 &1731770733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731770730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c617f2285b56c48972fb3854b43a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentence: todas las celdas estan abiertas, parece que ha sido un fallo electrico.
+  textUI: {fileID: 400787703}
 --- !u!1001 &1733081899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28941,6 +29249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1763682691}
   - component: {fileID: 1763682692}
+  - component: {fileID: 1763682693}
   m_Layer: 0
   m_Name: Texto3Collider2
   m_TagString: Untagged
@@ -28975,6 +29284,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.0255733, y: 2.9345512, z: 0.6087723}
   m_Center: {x: -0.20697212, y: -0.9672756, z: -0.19561385}
+--- !u!114 &1763682693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763682690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c617f2285b56c48972fb3854b43a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentence: No puedo acercarme a ellos, me volveran loco.
+  textUI: {fileID: 400787703}
 --- !u!1001 &1768038283
 PrefabInstance:
   m_ObjectHideFlags: 0

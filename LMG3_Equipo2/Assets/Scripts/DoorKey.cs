@@ -8,6 +8,7 @@ public class DoorKey : MonoBehaviour
     Player player;
     public GameObject doorBlockCollider;
     public Animator animator;
+    public TextNarrativeDisplay textNarrativeDisplay;
 
     void Awake()
     {
@@ -37,6 +38,8 @@ public class DoorKey : MonoBehaviour
             else
             {
                 AudioManager.instance.PlaySound("BlockedDoorSound");
+                textNarrativeDisplay.text.text = "Esta cerrada… deberia buscar algo para abrirla.";
+                textNarrativeDisplay.TriggerTextDisplay();
             }
         }
     }
