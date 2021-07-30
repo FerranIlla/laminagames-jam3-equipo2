@@ -14,7 +14,7 @@ public class Sanity : MonoBehaviour
     public Image fadeBlackImage;
     public Image fadeWhiteImage;
 
-
+    bool loseFunctionCalled = false;
 
     private void Awake()
     {
@@ -40,9 +40,10 @@ public class Sanity : MonoBehaviour
         sanityAmount = Mathf.Clamp01(sanityAmount);
 
 
-        if (sanityAmount <= 0f)
+        if (sanityAmount <= 0f && !loseFunctionCalled)
         {
             StartCoroutine(LoseGame());
+            loseFunctionCalled = true;
         }
 
     }

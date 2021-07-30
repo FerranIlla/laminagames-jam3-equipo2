@@ -18,9 +18,9 @@ public class PlayerRespiration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        source.volume = Utils.Map(sanity.sanityAmount, 0.8f, 0.3f, 0, maxVolume);
+        source.volume = Utils.Map(sanity.sanityAmount, 1f, 0.3f, 0, maxVolume);
 
-        source.volume = Mathf.Clamp(source.volume, 0, maxVolume);
+        source.volume = Mathf.Clamp(source.volume, 0f, maxVolume);
 
         if(sanity.sanityAmount <= 0.3)
         {

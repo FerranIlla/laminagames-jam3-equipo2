@@ -8,12 +8,12 @@ public class GameOverSceneManager : MonoBehaviour
 {
 
     float waitTime = 0f;
-    public TMP_Text returnText;
+    public GameObject returnText;
 
     // Start is called before the first frame update
     void Awake()
     {
-        returnText.enabled = false;
+        returnText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -21,8 +21,8 @@ public class GameOverSceneManager : MonoBehaviour
     {
         if (waitTime >= 3f)
         {
-            returnText.enabled = true;
-            if (Input.GetButtonDown("Jump"))
+            returnText.SetActive(true);
+            if (Input.GetButtonDown("Submit") || Input.GetButtonDown("Cancel"))
             {
                 SceneManager.LoadScene("MainMenu");
                 Destroy(GameObject.FindWithTag("Player"));

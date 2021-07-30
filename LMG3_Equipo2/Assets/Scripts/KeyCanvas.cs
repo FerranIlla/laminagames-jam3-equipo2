@@ -13,7 +13,7 @@ public class KeyCanvas : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Submit") || Input.GetKeyDown(KeyCode.Space))
         {
             player.canMove = true;
             gameObject.SetActive(false);

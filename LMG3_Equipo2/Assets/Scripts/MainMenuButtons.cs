@@ -13,25 +13,43 @@ public class MainMenuButtons : MonoBehaviour
     public GameObject option0, option1, option2;
 
     Color greenColor;
+    bool cruzetaUp = true;
+
+    public GameObject selectIndicator;
+    public GameObject backIndicator;
 
     private void Awake()
     {
         buttonsCanvas = gameObject;
 
         greenColor = option0.GetComponent<Image>().color;
+        selectIndicator.SetActive(true);
+        backIndicator.SetActive(false);
     }
 
     private void Update()
     {
         //Input
-        if (Input.GetKeyDown(KeyCode.DownArrow)) DownInput();
-        if (Input.GetKeyDown(KeyCode.UpArrow)) UpInput();
+        float downAxisValue = Input.GetAxisRaw("Vertical Dpad");
+        float verticalAxisValue = Input.GetAxisRaw("Vertical");
+
+        if ((downAxisValue > 0 || verticalAxisValue>0) && cruzetaUp)
+        {
+            UpInput();
+            cruzetaUp = false;
+        }
+        if ((downAxisValue < 0 || verticalAxisValue <0)&& cruzetaUp)
+        {
+            DownInput();
+            cruzetaUp = false;
+        }
+        if (downAxisValue == 0 && verticalAxisValue == 0) cruzetaUp = true;
+        
         PaintAllGreen();
         PaintSelectedWhite();
-
-
+        
         //select
-        if (Input.GetKeyDown(KeyCode.Space)) SelectInput();
+        if (Input.GetButtonDown("Submit")) SelectInput();
 
     }
 
@@ -44,18 +62,22 @@ public class MainMenuButtons : MonoBehaviour
     {
         //Hide buttons
         buttonsCanvas.SetActive(false);
+        selectIndicator.SetActive(false);
 
         //Show credits
         creditsCanvas.SetActive(true);
+        backIndicator.SetActive(true);
     }
 
     public void BackButtonPressed()
     {
         //Hide credits
         creditsCanvas.SetActive(false);
+        backIndicator.SetActive(false);
 
         //Show buttons
         buttonsCanvas.SetActive(true);
+        selectIndicator.SetActive(true);
     }
 
     public void ExitButtonPressed()
